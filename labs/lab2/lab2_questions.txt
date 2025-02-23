@@ -1,0 +1,32 @@
+1. Notice how there is some repetition: a set of about 10 lines is repeated 3 times, though the last repetition is a bit shorter. Where are the repetitions? What are the differences between them? 
+
+The repetitions are of the bitwise AND, OR, and NOT. The differences are the operations used, number of balues used, and memory usage.
+
+
+2. What does the "-c" argument to gcc mean? Where did you find this answer? 
+ 
+The -c argument in gcc compiles the code into an object file. I found this answer when the gcc made an object file with .o.
+
+
+3. Do you get the same results? Why or why not? 
+
+Yes, because the assembly code file is compiled into an object file called lab2_example.o
+
+
+4. How many bits are in 4 bytes? 
+
+1 byte has 8 bits and 4 bytes would be 4 times 8, equaling 32 bits.
+
+
+5. Look up the commands andl, orl, notl, and describe what they do. 
+andl performs an AND operation between two operands. orl performs an OR operation between two operands. notl performs an NOT operation between two operands.
+
+
+6. There are three variables in the program, with values of 3, 6, and 12. The "lab2_example.s" assembly language program comes from a program originally written in C. In the C compiler that generated this .s file, floats and ints both occupy 4 bytes of memory. From the context of this assembly language listing, what variable type(s) do the original variables have? Explain. Can you tell what the variables were named in the higher-level language code? Why or why not? What operations are being performed on these variables to give the results that are shown? Explain. 
+
+The original variables are integers because the program uses movl and andl, which are for integer iperations. The compiler takes the assembly code and compiles just the content, meaning we can't tell the HLL code. The operations being performed are AND, OR, and NOT. This is proved by the use of andl, orl, and notl in between the variables var1, var2, and var3.
+
+
+7. What if we copy the executable code from one machine to another? This example was downloaded using sftp, onto another x86-based machine. When attempting to run it, the following error occurs: cannot execute binary file. Why do you think this is? 
+
+The error might be because of the difference in operating systems between machines. 
