@@ -1,0 +1,121 @@
+Script started on Thu 06 Feb 2025 11:06:47 PM EST
+]0;tananya1@gsuad.gsu.edu@snowball:~[?1034h[tananya1@gsuad.gsu.edu@snowball ~]$ ls
+\      [0m[38;5;34mhello2[0m   hello.o           hello.s   lab2_example.s
+[38;5;34mhello[0m  hello.c  hello_original.s  lab1.log  lab2.log
+]0;tananya1@gsuad.gsu.edu@snowball:~[tananya1@gsuad.gsu.edu@snowball ~]$ cat lab2_example.s
+	.file	"lab2_example.c"
+	.section	.rodata
+.LC0:
+	.string	"%d %d\n"
+	.text
+	.globl	main
+	.type	main, @function
+main:
+.LFB0:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$16, %rsp
+	movl	$6, -4(%rbp)
+	movl	$12, -8(%rbp)
+	movl	$3, -12(%rbp)
+	movl	-12(%rbp), %eax
+	movl	-8(%rbp), %edx
+	andl	%eax, %edx
+	movl	-8(%rbp), %eax
+	movl	-4(%rbp), %ecx
+	andl	%ecx, %eax
+	movl	%eax, %esi
+	movl	$.LC0, %edi
+	movl	$0, %eax
+	call	printf
+	movl	-12(%rbp), %eax
+	movl	-8(%rbp), %edx
+	orl	%eax, %edx
+	movl	-8(%rbp), %eax
+	movl	-4(%rbp), %ecx
+	orl	%ecx, %eax
+	movl	%eax, %esi
+	movl	$.LC0, %edi
+	movl	$0, %eax
+	call	printf
+	movl	-8(%rbp), %eax
+	notl	%eax
+	movl	%eax, %edx
+	movl	-4(%rbp), %eax
+	notl	%eax
+	movl	%eax, %esi
+	movl	$.LC0, %edi
+	movl	$0, %eax
+	call	printf
+	movl	$0, %eax
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE0:
+	.size	main, .-main
+	.ident	"GCC: (GNU) 4.8.5 20150623 (Red Hat 4.8.5-44)"
+	.section	.note.GNU-stack,"",@progbits
+]0;tananya1@gsuad.gsu.edu@snowball:~[tananya1@gsuad.gsu.edu@snowball ~]$ gcc -c lab[K[K[K[K lab2_example.s
+]0;tananya1@gsuad.gsu.edu@snowball:~[tananya1@gsuad.gsu.edu@snowball ~]$ ls -l
+total 80
+-rw-rw-r--. 1 tananya1@gsuad.gsu.edu tananya1@gsuad.gsu.edu   135 Jan 24 13:22 \
+-rwxrwxr-x. 1 tananya1@gsuad.gsu.edu tananya1@gsuad.gsu.edu  8360 Jan 25 18:55 [0m[38;5;34mhello[0m
+-rwxrwxr-x. 1 tananya1@gsuad.gsu.edu tananya1@gsuad.gsu.edu  8360 Jan 25 19:00 [38;5;34mhello2[0m
+-rw-rw-r--. 1 tananya1@gsuad.gsu.edu tananya1@gsuad.gsu.edu   135 Jan 25 18:54 hello.c
+-rw-rw-r--. 1 tananya1@gsuad.gsu.edu tananya1@gsuad.gsu.edu  1512 Jan 25 19:01 hello.o
+-rw-rw-r--. 1 tananya1@gsuad.gsu.edu tananya1@gsuad.gsu.edu   504 Jan 25 18:58 hello_original.s
+-rw-rw-r--. 1 tananya1@gsuad.gsu.edu tananya1@gsuad.gsu.edu   504 Jan 25 18:59 hello.s
+-rw-rw-r--. 1 tananya1@gsuad.gsu.edu tananya1@gsuad.gsu.edu 26766 Jan 25 19:02 lab1.log
+-rw-rw-r--. 1 tananya1@gsuad.gsu.edu tananya1@gsuad.gsu.edu  1704 Feb  6 23:07 lab2_example.o
+-rw-rw-r--. 1 tananya1@gsuad.gsu.edu tananya1@gsuad.gsu.edu   999 Feb  6 23:05 lab2_example.s
+-rw-rw-r--. 1 tananya1@gsuad.gsu.edu tananya1@gsuad.gsu.edu     0 Feb  6 23:06 lab2.log
+]0;tananya1@gsuad.gsu.edu@snowball:~[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ gcc lab2_exm[Kamp le.o lab2_example1[C[C lab2_example1[C[C[C[C[C- lab2_example1[C[C[C[C[C[Co lab2_example1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+]0;tananya1@gsuad.gsu.edu@snowball:~[tananya1@gsuad.gsu.edu@snowball ~]$ ls
+\        hello.o           [0m[38;5;34mlab2_example1[0m
+[38;5;34mhello[0m    hello_original.s  lab2_example.o
+[38;5;34mhello2[0m   hello.s           lab2_example.s
+hello.c  lab1.log          lab2.log
+]0;tananya1@gsuad.gsu.edu@snowball:~[tananya1@gsuad.gsu.edu@snowball ~]$ gcc lab2_examp le.s -o lab2_example2
+]0;tananya1@gsuad.gsu.edu@snowball:~[tananya1@gsuad.gsu.edu@snowball ~]$ ls -l
+total 108
+-rw-rw-r--. 1 tananya1@gsuad.gsu.edu tananya1@gsuad.gsu.edu   135 Jan 24 13:22 \
+-rwxrwxr-x. 1 tananya1@gsuad.gsu.edu tananya1@gsuad.gsu.edu  8360 Jan 25 18:55 [0m[38;5;34mhello[0m
+-rwxrwxr-x. 1 tananya1@gsuad.gsu.edu tananya1@gsuad.gsu.edu  8360 Jan 25 19:00 [38;5;34mhello2[0m
+-rw-rw-r--. 1 tananya1@gsuad.gsu.edu tananya1@gsuad.gsu.edu   135 Jan 25 18:54 hello.c
+-rw-rw-r--. 1 tananya1@gsuad.gsu.edu tananya1@gsuad.gsu.edu  1512 Jan 25 19:01 hello.o
+-rw-rw-r--. 1 tananya1@gsuad.gsu.edu tananya1@gsuad.gsu.edu   504 Jan 25 18:58 hello_original.s
+-rw-rw-r--. 1 tananya1@gsuad.gsu.edu tananya1@gsuad.gsu.edu   504 Jan 25 18:59 hello.s
+-rw-rw-r--. 1 tananya1@gsuad.gsu.edu tananya1@gsuad.gsu.edu 26766 Jan 25 19:02 lab1.log
+-rwxrwxr-x. 1 tananya1@gsuad.gsu.edu tananya1@gsuad.gsu.edu  8368 Feb  6 23:15 [38;5;34mlab2_example1[0m
+-rwxrwxr-x. 1 tananya1@gsuad.gsu.edu tananya1@gsuad.gsu.edu  8368 Feb  6 23:15 [38;5;34mlab2_example2[0m
+-rw-rw-r--. 1 tananya1@gsuad.gsu.edu tananya1@gsuad.gsu.edu  1704 Feb  6 23:07 lab2_example.o
+-rw-rw-r--. 1 tananya1@gsuad.gsu.edu tananya1@gsuad.gsu.edu   999 Feb  6 23:05 lab2_example.s
+-rw-rw-r--. 1 tananya1@gsuad.gsu.edu tananya1@gsuad.gsu.edu  4096 Feb  6 23:15 lab2.log
+]0;tananya1@gsuad.gsu.edu@snowball:~[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ [K[tananya1@gsuad.gsu.edu@snowball ~]$ ./lab_example12_example1[C[C[C[C[C[C[C[C[C
+4 0
+14 15
+-7 -13
+]0;tananya1@gsuad.gsu.edu@snowball:~[tananya1@gsuad.gsu.edu@snowball ~]$ sftp tananya1@snow vall[K[K[K[Kball.cs.gsu.edu
+Connected to snowball.cs.gsu.edu.
+sftp> ls
+\                 hello             hello.c           
+hello.o           hello.s           hello2            
+hello_original.s  lab1.log          lab2.log          
+lab2_example.o    lab2_example.s    lab2_example1     
+lab2_example2     
+sftp> get lab2_example1
+Fetching /home/tananya1/lab2_example1 to lab2_example1
+/home/tananya1/lab2_   0%    0     0.0KB/s   --:-- ETA/home/tananya1/lab2_   0%    0     0.0KB/s   --:-- ETA
+sftp> lls lab2*
+lab2_example1  lab2_example.o  lab2.log
+lab2_example2  lab2_example.s
+sftp> quit
+]0;tananya1@gsuad.gsu.edu@snowball:~[tananya1@gsuad.gsu.edu@snowball ~]$ exit
+exit
+
+Script done on Thu 06 Feb 2025 11:20:03 PM EST
