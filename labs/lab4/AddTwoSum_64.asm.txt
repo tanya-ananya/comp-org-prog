@@ -1,0 +1,19 @@
+; Assemble:	  nasm -f elf64 AddTwoSum_64.asm
+; Link:		  gcc AddTwoSum_64.o -o AddTwoSum_64
+
+; AddTwoSum_64.asm - Chapter 3 example.
+; See http://www.asmirvine.com/gettingStartedVS2019/index.htm
+; This is adapted for NASM.
+
+    section .data       ; Data section, initialized variables
+sum: dq 0
+
+    section .text
+    global main
+main:
+   mov  rax, 5
+   add  rax, 6
+   mov  [sum], rax
+
+   mov  rax, 0
+   ret
