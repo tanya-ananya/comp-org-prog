@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------------------
+Starting program /Users/taaruniananya/Downloads/classes/comp org/lab5/HelloWorld.S
+
+Hello RISC-V World
+42 1
+Hello RISC-V World
+42 2
+Hello RISC-V World
+42 3
+
+Stop program execution!
+-------------------------------------------------------------------------------------------
